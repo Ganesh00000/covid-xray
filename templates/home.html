@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Covid x-ray</title>
+</head>
+
+<style>
+img{
+width:45%;
+height:500px;
+float:right;
+}
+h1
+{
+margin-left:40px;
+margin-top:20px;
+color:red;
+font-size:300%;
+font-family:sans-serif;
+}
+h3
+{
+color:green;
+font-family:sans-serif;
+}
+p,li
+{
+color:blue;
+font-family:sans-serif;
+}
+h4
+{
+color:red;
+font-size:150%;
+font-family:sans-serif;
+}
+.work
+{
+margin-left:40px;
+margin-top:40px;
+}
+h5
+{
+color:black;
+margin-left:20px;
+}
+.st
+{
+margin-left:40px;
+}
+button
+{
+color:white;
+background-color:black;
+border-radius:2%;
+padding:5px;
+}
+</style>
+<body>
+<h1>Covid X-ray</h1>
+<img src="static/covid-19-corona-virus-logo-symbol-icon-color-logo-initial-letter-c-virus-logo-design-template_144543-469.jpg">
+<div class="work">
+<h3>How does Covid X-ray works?</h2>
+<p>Covid X-ray is AI based model that automatically detects your lung x-ray and show covid status</p>
+<h3>What disease can be detected using Covid X-ray?</h3>
+<ul type="disc">
+<li>Covid-19</li>
+<li>Viral Pneumonia</li>
+</ul>
+<br>
+<h4>Insert your lung x-ray here</h4>
+<form action="/predict" method="POST" enctype="multipart/form-data">
+<input type="file" id="myfile" name="myfile">
+<button type="submit">Predict</button>
+</form>
+{%if data%}
+	<font color="red">{{data}}</font>
+{%endif%}
+
+</div>
+<br>
+<br>
+<h3 class="st">Stay Safe and Take Care</h3>
+<br>
+<h5>Prepared by Ganesh Sah</h5>
+</body>
+</html>
